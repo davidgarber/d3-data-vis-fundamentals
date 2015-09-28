@@ -26,6 +26,14 @@
           .interpolate("linear");
 
         var svg = d3.select("body").append("svg").attr({width:w, height:h});
+
+        var viz = svg.append("path")
+                    .attr({
+                      d: lineFun(ds),
+                      "stroke" : "purple",
+                      "stroke-width" : 2,
+                      "fill" : "none"
+                    });
       });
 
     </script>
