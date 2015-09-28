@@ -23,6 +23,9 @@
         var lineFun = d3.svg.line()
           .x(function(d) { returns((d.month-20133001)/3.25)})
           .y(function(d) {return h-d.sales;})
+          .interpolate("linear");
+
+        var svg = d3.select("body").append("svg").attr({width:w, height:h});
       });
 
     </script>
