@@ -19,7 +19,11 @@
           console.log(data);
           ds=data;
         }
-      })
+
+        var lineFun = d3.svg.line()
+          .x(function(d) { returns((d.month-20133001)/3.25)})
+          .y(function(d) {return h-d.sales;})
+      });
 
     </script>
 
